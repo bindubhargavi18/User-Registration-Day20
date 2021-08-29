@@ -11,5 +11,14 @@ public class UserRegistration
 		else
 			return false;
 	}
+	public boolean secondName(String sname)
+	{
+		boolean name;
+		name=Character.isUpperCase(sname.charAt(0));
+		if(name && sname.length()>=3)
+			return true;
+		else
+			return false;
+	}
 	
 }

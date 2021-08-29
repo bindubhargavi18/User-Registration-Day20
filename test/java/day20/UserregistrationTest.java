@@ -7,10 +7,17 @@ import org.junit.Test;
 public class UserregistrationTest {
 
 	@Test
-	public void test() 
+	public void checkFirstNameStartsWithCapAndShouldHaveMin3Letters() 
 	{
 		UserRegistration user=new UserRegistration();
 		boolean result=user.FirstName("Bindu");
+		assertEquals(result,true);
+	}
+	@Test
+	public void checkSecondNameStartsWithCapAndShouldHaveMin3Letters() 
+	{
+		UserRegistration user=new UserRegistration();
+		boolean result=user.secondName("Bindu");
 		assertEquals(result,true);
 	}
 
