@@ -2,13 +2,14 @@ package day20;
 
 public class UserRegistration 
 {
-	public String FirstName(String fname)
+	public boolean FirstName(String fname)
 	{
 		boolean name;
 		name=Character.isUpperCase(fname.charAt(0));
 		if(name && fname.length()>=3)
-			return fname;
+			return true;
 		else
-			return null;
+			return false;
 	}
+	
 }

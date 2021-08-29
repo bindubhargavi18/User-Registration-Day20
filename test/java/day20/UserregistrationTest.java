@@ -10,8 +10,8 @@ public class UserregistrationTest {
 	public void test() 
 	{
 		UserRegistration user=new UserRegistration();
-		String result=user.FirstName("Bindu");
-		assertEquals(result,"Bindu");
+		boolean result=user.FirstName("Bindu");
+		assertEquals(result,true);
 	}
 
 }
