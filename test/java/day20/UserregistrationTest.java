@@ -20,5 +20,12 @@ public class UserregistrationTest {
 		boolean result=user.secondName("Bindu");
 		assertEquals(result,true);
 	}
+	@Test
+	public void emailShouldContainLetterNumbersAtSymbolAndCom()
+	{
+		UserRegistration user=new UserRegistration();
+		boolean result=user.secondName("abc8@gmail.com");
+		assertEquals(result,true);
+	}
 
 }
