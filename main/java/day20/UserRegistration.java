@@ -32,5 +32,14 @@ public class UserRegistration
 		else
 			return false;
 	}
+	public boolean phoneNumber(String number)
+	{
+		String regex="91?[0-9]{10}";
+		Pattern pattern = Pattern.compile(regex);
+		if(pattern.matcher(number).matches())
+			return true;
+		else 
+			return false;
+	}
 	
 }

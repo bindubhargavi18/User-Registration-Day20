@@ -27,5 +27,12 @@ public class UserregistrationTest {
 		boolean result=user.secondName("abc8@gmail.com");
 		assertEquals(result,true);
 	}
+	@Test
+	public void phoneNumberShouldContainCountryCodeWith10Digits()
+	{
+		UserRegistration user=new UserRegistration();
+		boolean result=user.secondName("8764321561");
+		assertEquals(result,true);
+	}
 
 }
