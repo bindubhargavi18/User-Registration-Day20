@@ -34,7 +34,7 @@ public class UserRegistration
 	}
 	public boolean phoneNumber(String number)
 	{
-		String regex="91?[0-9]{10}";
+		String regex="91[0-9]{10}";
 		Pattern pattern = Pattern.compile(regex);
 		if(pattern.matcher(number).matches())
 			return true;
@@ -43,13 +43,14 @@ public class UserRegistration
 	}
 	public boolean password(String password)
 	{
-		for(int i=0;i<password.length();i++)
-		{
-			char ch;
-			ch = password.charAt(i);
-			if(password.length()>=8 && Character.isUpperCase(ch))
-				return true;
-		}
-		return false;
+		String regex = "^(?=.*[0-9])"
+                + "(?=.*[a-z])(?=.*[A-Z])"
+                + "(?=.*[@#$%^&+=])"
+                + "(?=\\S+$).{8,20}$";
+		Pattern pattern = Pattern.compile(regex);
+		if(pattern.matcher(password).matches())
+			return true;
+		else
+			return false;
 	}
 }

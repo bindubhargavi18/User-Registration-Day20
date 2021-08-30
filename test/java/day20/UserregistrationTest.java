@@ -31,14 +31,14 @@ public class UserregistrationTest {
 	public void phoneNumberShouldContainCountryCodeWith10Digits()
 	{
 		UserRegistration user=new UserRegistration();
-		boolean result=user.secondName("8764321561");
+		boolean result=user.phoneNumber("918764321561");
 		assertEquals(result,true);
 	}
 	@Test
 	public void passwordShouldContainMin8CharactersAndAtleastOneCaps()
 	{
 		UserRegistration user=new UserRegistration();
-		boolean result=user.password("heuF8761");
+		boolean result=user.password("heuFsw@ds5");
 		assertEquals(result,true);
 	}
 	
