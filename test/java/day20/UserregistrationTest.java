@@ -35,11 +35,12 @@ public class UserregistrationTest {
 		assertEquals(result,true);
 	}
 	@Test
-	public void passwordShouldContainMin8Characters()
+	public void passwordShouldContainMin8CharactersAndAtleastOneCaps()
 	{
 		UserRegistration user=new UserRegistration();
-		boolean result=user.password("heuf8761");
+		boolean result=user.password("heuF8761");
 		assertEquals(result,true);
 	}
+	
 
 }

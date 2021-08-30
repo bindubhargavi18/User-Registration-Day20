@@ -43,10 +43,13 @@ public class UserRegistration
 	}
 	public boolean password(String password)
 	{
-		if(password.length()>=8)
-			return true;
-		else
-			return false;
-			
+		for(int i=0;i<password.length();i++)
+		{
+			char ch;
+			ch = password.charAt(i);
+			if(password.length()>=8 && Character.isUpperCase(ch))
+				return true;
+		}
+		return false;
 	}
 }
